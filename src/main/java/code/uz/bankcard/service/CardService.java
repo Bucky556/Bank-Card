@@ -32,4 +32,6 @@ public interface CardService {
     AppResponse<String> changeStatus(UUID cardId, CardStatus status);
 
     CardResponseDTO getBalance(UUID cardId);
+
+    AppResponse<String> requestCardBlock(UUID cardId);
 }

@@ -73,4 +73,11 @@ public class CardController {
     public ResponseEntity<CardResponseDTO> getCardBalance(@PathVariable UUID cardId) {
         return ResponseEntity.ok(cardService.getBalance(cardId));
     }
+
+    @PutMapping("/block-request/{cardId}")
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @Operation(summary = "Request card block", description = "User requests to block their card")
+    public ResponseEntity<AppResponse<String>> requestBlock(@PathVariable UUID cardId) {
+        return ResponseEntity.ok(cardService.requestCardBlock(cardId));
+    }
 }

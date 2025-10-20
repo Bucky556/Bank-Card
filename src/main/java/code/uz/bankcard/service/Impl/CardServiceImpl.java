@@ -23,6 +23,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -188,6 +189,27 @@ public class CardServiceImpl implements CardService {
         }
 
         return getCardResponseMasked(cardEntity);
+    }
+
+    @Override
+    @Transactional
+    public AppResponse<String> requestCardBlock(UUID cardId) {
+        UUID profileId = SecurityUtil.getID();
+
+        CardEntity card = cardRepository.findByIdAndVisibleTrue(cardId)
+                .orElseThrow(() -> new NotFoundException("Card not found"));
+
+        if (!card.getProfile().getId().equals(profileId)) {
+            throw new BadException("This card does not belong to your profile");
+        }
+
+        if (card.getStatus() == CardStatus.BLOCKED) {
+            throw new BadException("Card is already blocked");
+        }
+
+        cardRepository.updateStatusById(CardStatus.REQUEST_BLOCK, cardId);
+
+        return new AppResponse<>("Request sent!");
     }
 
     private CardResponseDTO getCardResponse(CardEntity cardEntity) {
