@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="004-add-status-column-to-profile" author="nodirjonokilov">
+        <sql>
+            ALTER TABLE profile
+                ADD COLUMN status VARCHAR(20) DEFAULT 'ACTIVE';
+
+            ALTER TABLE profile
+                ADD CONSTRAINT profile_status_check
+                    CHECK (status IN ('ACTIVE','BLOCKED'));
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
+

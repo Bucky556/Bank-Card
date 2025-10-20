@@ -2097,3 +2097,512 @@ Caused by: org.postgresql.util.PSQLException: ERROR: column "status" of relation
 2025-10-21T00:43:50.466+09:00  INFO 3473 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-21T00:43:50.469+09:00  INFO 3473 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-10-21T00:43:50.471+09:00  INFO 3473 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T00:54:47.121+09:00  INFO 4513 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 4513 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T00:54:47.122+09:00  INFO 4513 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T00:54:47.460+09:00  INFO 4513 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T00:54:47.482+09:00  INFO 4513 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T00:54:47.678+09:00  INFO 4513 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T00:54:47.684+09:00  INFO 4513 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T00:54:47.684+09:00  INFO 4513 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T00:54:47.707+09:00  INFO 4513 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T00:54:47.708+09:00  INFO 4513 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 569 ms
+2025-10-21T00:54:47.762+09:00  INFO 4513 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T00:54:47.806+09:00  INFO 4513 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f18b738
+2025-10-21T00:54:47.807+09:00  INFO 4513 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T00:54:47.870+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T00:54:48.069+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T00:54:48.100+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-10-21T00:54:48.101+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.command                        : Using deploymentId: 0975688101
+2025-10-21T00:54:48.101+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T00:54:48.103+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.ui                             : Running Changeset: db/changelog-003-add-profile-status.xml::004-add-status-column-to-profile::nodirjonokilov
+2025-10-21T00:54:48.116+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.changelog                      : Custom SQL executed
+2025-10-21T00:54:48.117+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.changelog                      : ChangeSet db/changelog-003-add-profile-status.xml::004-add-status-column-to-profile::nodirjonokilov ran successfully in 13ms
+2025-10-21T00:54:48.120+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T00:54:48.121+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : Run:                          1
+2025-10-21T00:54:48.121+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : Previously run:               3
+2025-10-21T00:54:48.121+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T00:54:48.121+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T00:54:48.121+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T00:54:48.121+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T00:54:48.122+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.command                        : Update command completed successfully.
+2025-10-21T00:54:48.122+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 1
+2025-10-21T00:54:48.123+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-10-21T00:54:48.123+09:00  INFO 4513 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T00:54:48.154+09:00  INFO 4513 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T00:54:48.178+09:00  INFO 4513 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T00:54:48.191+09:00  INFO 4513 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T00:54:48.296+09:00  INFO 4513 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T00:54:48.327+09:00  INFO 4513 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T00:54:48.687+09:00  INFO 4513 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T00:54:48.822+09:00  INFO 4513 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T00:54:48.989+09:00  INFO 4513 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T00:54:49.214+09:00  INFO 4513 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T00:54:49.273+09:00  WARN 4513 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T00:54:49.572+09:00  INFO 4513 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T00:54:49.577+09:00  INFO 4513 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.618 seconds (process running for 2.937)
+2025-10-21T00:55:09.968+09:00  INFO 4513 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T00:55:10.017+09:00  INFO 4513 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T00:55:10.023+09:00  INFO 4513 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T00:55:10.026+09:00  INFO 4513 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T00:55:10.028+09:00  INFO 4513 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T00:55:11.442+09:00  INFO 4535 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 4535 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T00:55:11.443+09:00  INFO 4535 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T00:55:11.765+09:00  INFO 4535 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T00:55:11.786+09:00  INFO 4535 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T00:55:11.983+09:00  INFO 4535 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T00:55:11.989+09:00  INFO 4535 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T00:55:11.989+09:00  INFO 4535 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T00:55:12.007+09:00  INFO 4535 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T00:55:12.008+09:00  INFO 4535 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 548 ms
+2025-10-21T00:55:12.059+09:00  INFO 4535 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T00:55:12.093+09:00  INFO 4535 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@aca3c85
+2025-10-21T00:55:12.093+09:00  INFO 4535 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T00:55:12.149+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T00:55:12.344+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T00:55:12.366+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T00:55:12.367+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T00:55:12.370+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T00:55:12.370+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T00:55:12.371+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T00:55:12.371+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T00:55:12.371+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T00:55:12.371+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T00:55:12.371+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T00:55:12.371+09:00  INFO 4535 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T00:55:12.415+09:00  INFO 4535 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T00:55:12.440+09:00  INFO 4535 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T00:55:12.452+09:00  INFO 4535 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T00:55:12.555+09:00  INFO 4535 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T00:55:12.588+09:00  INFO 4535 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T00:55:12.954+09:00  INFO 4535 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T00:55:13.087+09:00  INFO 4535 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T00:55:13.254+09:00  INFO 4535 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T00:55:13.472+09:00  INFO 4535 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T00:55:13.530+09:00  WARN 4535 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T00:55:13.827+09:00  INFO 4535 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T00:55:13.831+09:00  INFO 4535 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.562 seconds (process running for 2.955)
+2025-10-21T01:01:50.726+09:00  INFO 4535 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:01:50.731+09:00  INFO 4535 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:01:50.739+09:00  INFO 4535 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:01:50.742+09:00  INFO 4535 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:01:50.743+09:00  INFO 4535 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:17:36.988+09:00  INFO 5150 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5150 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:17:36.989+09:00  INFO 5150 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:17:37.313+09:00  INFO 5150 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:17:37.334+09:00  INFO 5150 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:17:37.518+09:00  INFO 5150 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:17:37.524+09:00  INFO 5150 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:17:37.524+09:00  INFO 5150 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:17:37.543+09:00  INFO 5150 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:17:37.543+09:00  INFO 5150 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 533 ms
+2025-10-21T01:17:37.602+09:00  INFO 5150 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:17:37.661+09:00  INFO 5150 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fb22ae3
+2025-10-21T01:17:37.661+09:00  INFO 5150 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:17:37.724+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:17:37.913+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:17:37.930+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:17:37.931+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:17:37.933+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:17:37.933+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:17:37.933+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:17:37.933+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:17:37.933+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:17:37.933+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:17:37.934+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:17:37.934+09:00  INFO 5150 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:17:37.968+09:00  INFO 5150 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:17:37.992+09:00  INFO 5150 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:17:38.004+09:00  INFO 5150 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:17:38.107+09:00  INFO 5150 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:17:38.137+09:00  INFO 5150 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:17:38.489+09:00  INFO 5150 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:17:38.634+09:00  INFO 5150 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:17:38.812+09:00  INFO 5150 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:17:39.023+09:00  INFO 5150 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:17:39.082+09:00  WARN 5150 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:17:39.369+09:00  INFO 5150 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:17:39.373+09:00  INFO 5150 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.559 seconds (process running for 2.859)
+2025-10-21T01:17:42.433+09:00  INFO 5150 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:17:42.435+09:00  INFO 5150 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:17:42.439+09:00  INFO 5150 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:17:42.440+09:00  INFO 5150 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:17:42.441+09:00  INFO 5150 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:18:06.476+09:00  INFO 5175 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5175 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:18:06.477+09:00  INFO 5175 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:18:06.790+09:00  INFO 5175 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:18:06.811+09:00  INFO 5175 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:18:07.000+09:00  INFO 5175 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:18:07.006+09:00  INFO 5175 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:18:07.006+09:00  INFO 5175 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:18:07.022+09:00  INFO 5175 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:18:07.022+09:00  INFO 5175 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 530 ms
+2025-10-21T01:18:07.074+09:00  INFO 5175 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:18:07.106+09:00  INFO 5175 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6735f210
+2025-10-21T01:18:07.106+09:00  INFO 5175 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:18:07.158+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:18:07.343+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:18:07.359+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:18:07.359+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:18:07.365+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:18:07.366+09:00  INFO 5175 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:18:07.394+09:00  INFO 5175 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:18:07.415+09:00  INFO 5175 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:18:07.426+09:00  INFO 5175 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:18:07.567+09:00  INFO 5175 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:18:07.599+09:00  INFO 5175 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:18:07.947+09:00  INFO 5175 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:18:08.098+09:00  INFO 5175 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:18:08.342+09:00  INFO 5175 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:18:08.583+09:00  INFO 5175 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:18:08.647+09:00  WARN 5175 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:18:08.965+09:00  INFO 5175 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:18:08.970+09:00  INFO 5175 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.653 seconds (process running for 2.885)
+2025-10-21T01:18:41.891+09:00  INFO 5175 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:18:41.892+09:00  INFO 5175 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:18:41.895+09:00  INFO 5175 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-21T01:18:41.978+09:00  INFO 5175 --- [Bank-Card] [http-nio-8080-exec-1] c.uz.bankcard.controller.AuthController  : Login: adminjon@gmail.com
+2025-10-21T01:19:08.600+09:00  INFO 5175 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:19:08.605+09:00  INFO 5175 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:19:08.613+09:00  INFO 5175 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:19:08.617+09:00  INFO 5175 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:19:08.620+09:00  INFO 5175 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:21:13.644+09:00  INFO 5313 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5313 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:21:13.645+09:00  INFO 5313 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:21:13.988+09:00  INFO 5313 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:21:14.009+09:00  INFO 5313 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:21:14.198+09:00  INFO 5313 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:21:14.211+09:00  INFO 5313 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:21:14.211+09:00  INFO 5313 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:21:14.230+09:00  INFO 5313 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:21:14.231+09:00  INFO 5313 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2025-10-21T01:21:14.282+09:00  INFO 5313 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:21:14.318+09:00  INFO 5313 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1002d192
+2025-10-21T01:21:14.318+09:00  INFO 5313 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:21:14.371+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:21:14.562+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:21:14.578+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:21:14.579+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:21:14.582+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:21:14.582+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:21:14.582+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:21:14.582+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:21:14.582+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:21:14.582+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:21:14.583+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:21:14.583+09:00  INFO 5313 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:21:14.617+09:00  INFO 5313 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:21:14.645+09:00  INFO 5313 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:21:14.659+09:00  INFO 5313 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:21:14.767+09:00  INFO 5313 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:21:14.799+09:00  INFO 5313 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:21:15.165+09:00  INFO 5313 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:21:15.298+09:00  INFO 5313 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:21:15.466+09:00  INFO 5313 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:21:15.676+09:00  INFO 5313 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:21:15.736+09:00  WARN 5313 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:21:16.033+09:00  INFO 5313 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:21:16.037+09:00  INFO 5313 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.574 seconds (process running for 2.87)
+2025-10-21T01:22:44.325+09:00  INFO 5313 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:22:44.325+09:00  INFO 5313 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:22:44.328+09:00  INFO 5313 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-21T01:22:49.034+09:00  INFO 5313 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:22:49.035+09:00  INFO 5313 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:22:49.041+09:00  INFO 5313 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:22:49.042+09:00  INFO 5313 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:22:49.043+09:00  INFO 5313 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:26:09.007+09:00  INFO 5593 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5593 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:26:09.008+09:00  INFO 5593 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:26:09.344+09:00  INFO 5593 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:26:09.365+09:00  INFO 5593 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:26:09.560+09:00  INFO 5593 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:26:09.569+09:00  INFO 5593 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:26:09.569+09:00  INFO 5593 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:26:09.586+09:00  INFO 5593 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:26:09.586+09:00  INFO 5593 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 559 ms
+2025-10-21T01:26:09.637+09:00  INFO 5593 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:26:09.685+09:00  INFO 5593 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2424cb9d
+2025-10-21T01:26:09.686+09:00  INFO 5593 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:26:09.743+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:26:09.933+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:26:09.955+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:26:09.956+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:26:09.958+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:26:09.959+09:00  INFO 5593 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:26:09.989+09:00  INFO 5593 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:26:10.013+09:00  INFO 5593 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:26:10.027+09:00  INFO 5593 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:26:10.134+09:00  INFO 5593 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:26:10.166+09:00  INFO 5593 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:26:10.521+09:00  INFO 5593 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:26:10.668+09:00  INFO 5593 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:26:10.789+09:00  INFO 5593 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:26:11.055+09:00  INFO 5593 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:26:11.113+09:00  WARN 5593 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:26:11.408+09:00  INFO 5593 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:26:11.412+09:00  INFO 5593 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.588 seconds (process running for 2.898)
+2025-10-21T01:26:56.092+09:00  INFO 5593 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:26:56.092+09:00  INFO 5593 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:26:56.098+09:00  INFO 5593 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-10-21T01:27:19.831+09:00  INFO 5593 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:27:19.844+09:00  INFO 5593 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:27:19.862+09:00  INFO 5593 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:27:19.878+09:00  INFO 5593 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:27:19.887+09:00  INFO 5593 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:27:21.827+09:00  INFO 5802 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5802 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:27:21.827+09:00  INFO 5802 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:27:22.157+09:00  INFO 5802 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:27:22.178+09:00  INFO 5802 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:27:22.374+09:00  INFO 5802 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:27:22.384+09:00  INFO 5802 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:27:22.385+09:00  INFO 5802 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:27:22.400+09:00  INFO 5802 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:27:22.400+09:00  INFO 5802 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 553 ms
+2025-10-21T01:27:22.452+09:00  INFO 5802 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:27:22.484+09:00  INFO 5802 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6bd92538
+2025-10-21T01:27:22.484+09:00  INFO 5802 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:27:22.556+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:27:22.751+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:27:22.772+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:27:22.772+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:27:22.775+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:27:22.776+09:00  INFO 5802 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:27:22.805+09:00  INFO 5802 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:27:22.829+09:00  INFO 5802 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:27:22.841+09:00  INFO 5802 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:27:22.944+09:00  INFO 5802 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:27:22.973+09:00  INFO 5802 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:27:23.341+09:00  INFO 5802 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:27:23.476+09:00  INFO 5802 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:27:23.590+09:00  INFO 5802 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:27:23.859+09:00  INFO 5802 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:27:23.921+09:00  WARN 5802 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:27:24.211+09:00  INFO 5802 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:27:24.216+09:00  INFO 5802 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.566 seconds (process running for 2.889)
+2025-10-21T01:27:24.739+09:00  INFO 5802 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:27:24.739+09:00  INFO 5802 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:27:24.740+09:00  INFO 5802 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-21T01:27:41.197+09:00  INFO 5802 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:27:41.206+09:00  INFO 5802 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:27:41.211+09:00  INFO 5802 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:27:41.214+09:00  INFO 5802 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:27:41.215+09:00  INFO 5802 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:29:18.089+09:00  INFO 5883 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5883 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:29:18.090+09:00  INFO 5883 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:29:18.401+09:00  INFO 5883 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:29:18.421+09:00  INFO 5883 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:29:18.605+09:00  INFO 5883 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:29:18.610+09:00  INFO 5883 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:29:18.611+09:00  INFO 5883 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:29:18.629+09:00  INFO 5883 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:29:18.629+09:00  INFO 5883 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 521 ms
+2025-10-21T01:29:18.681+09:00  INFO 5883 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:29:18.711+09:00  INFO 5883 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2424cb9d
+2025-10-21T01:29:18.712+09:00  INFO 5883 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:29:18.760+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:29:18.942+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:29:18.961+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:29:18.961+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:29:18.964+09:00  INFO 5883 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:29:18.993+09:00  INFO 5883 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:29:19.011+09:00  INFO 5883 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:29:19.021+09:00  INFO 5883 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:29:19.125+09:00  INFO 5883 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:29:19.149+09:00  INFO 5883 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:29:19.509+09:00  INFO 5883 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:29:19.647+09:00  INFO 5883 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:29:19.762+09:00  INFO 5883 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:29:20.045+09:00  INFO 5883 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:29:20.116+09:00  WARN 5883 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:29:20.412+09:00  INFO 5883 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:29:20.417+09:00  INFO 5883 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.493 seconds (process running for 2.716)
+2025-10-21T01:29:21.576+09:00  INFO 5883 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:29:21.576+09:00  INFO 5883 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:29:21.577+09:00  INFO 5883 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-21T01:31:09.569+09:00  INFO 5883 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:31:09.573+09:00  INFO 5883 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:31:09.578+09:00  INFO 5883 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:31:09.582+09:00  INFO 5883 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:31:09.584+09:00  INFO 5883 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:33:22.609+09:00  INFO 5970 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 5970 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:33:22.610+09:00  INFO 5970 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:33:22.918+09:00  INFO 5970 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:33:22.939+09:00  INFO 5970 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:33:23.127+09:00  INFO 5970 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:33:23.132+09:00  INFO 5970 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:33:23.132+09:00  INFO 5970 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:33:23.148+09:00  INFO 5970 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:33:23.148+09:00  INFO 5970 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 522 ms
+2025-10-21T01:33:23.202+09:00  INFO 5970 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:33:23.233+09:00  INFO 5970 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6df11e91
+2025-10-21T01:33:23.233+09:00  INFO 5970 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:33:23.280+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:33:23.458+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:33:23.474+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:33:23.474+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:33:23.477+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:33:23.478+09:00  INFO 5970 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:33:23.509+09:00  INFO 5970 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:33:23.527+09:00  INFO 5970 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:33:23.538+09:00  INFO 5970 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:33:23.635+09:00  INFO 5970 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:33:23.661+09:00  INFO 5970 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:33:23.998+09:00  INFO 5970 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:33:24.146+09:00  INFO 5970 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:33:24.255+09:00  INFO 5970 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:33:24.523+09:00  INFO 5970 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:33:24.580+09:00  WARN 5970 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:33:24.946+09:00  INFO 5970 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:33:24.951+09:00  INFO 5970 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.505 seconds (process running for 2.782)
+2025-10-21T01:33:52.531+09:00  INFO 5970 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:33:52.532+09:00  INFO 5970 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:33:52.534+09:00  INFO 5970 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-21T01:34:03.206+09:00  INFO 5970 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:34:03.210+09:00  INFO 5970 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:34:03.217+09:00  INFO 5970 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:34:03.222+09:00  INFO 5970 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:34:03.224+09:00  INFO 5970 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-21T01:34:05.066+09:00  INFO 6043 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 6043 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-21T01:34:05.066+09:00  INFO 6043 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-21T01:34:05.384+09:00  INFO 6043 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-21T01:34:05.407+09:00  INFO 6043 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+2025-10-21T01:34:05.598+09:00  INFO 6043 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-21T01:34:05.604+09:00  INFO 6043 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-21T01:34:05.604+09:00  INFO 6043 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-21T01:34:05.620+09:00  INFO 6043 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-21T01:34:05.620+09:00  INFO 6043 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 536 ms
+2025-10-21T01:34:05.672+09:00  INFO 6043 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-21T01:34:05.706+09:00  INFO 6043 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@372954e1
+2025-10-21T01:34:05.707+09:00  INFO 6043 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-21T01:34:05.758+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-21T01:34:05.942+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:34:05.959+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-21T01:34:05.961+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-21T01:34:05.967+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-21T01:34:05.968+09:00  INFO 6043 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-21T01:34:06.000+09:00  INFO 6043 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-21T01:34:06.024+09:00  INFO 6043 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-21T01:34:06.040+09:00  INFO 6043 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-21T01:34:06.147+09:00  INFO 6043 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-21T01:34:06.178+09:00  INFO 6043 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-21T01:34:06.524+09:00  INFO 6043 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-21T01:34:06.670+09:00  INFO 6043 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:34:06.784+09:00  INFO 6043 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-21T01:34:07.054+09:00  INFO 6043 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-21T01:34:07.112+09:00  WARN 6043 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-21T01:34:07.397+09:00  INFO 6043 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-21T01:34:07.402+09:00  INFO 6043 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.516 seconds (process running for 2.775)
+2025-10-21T01:34:08.502+09:00  INFO 6043 --- [Bank-Card] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-21T01:34:08.503+09:00  INFO 6043 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-21T01:34:08.503+09:00  INFO 6043 --- [Bank-Card] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-21T01:34:29.432+09:00  INFO 6043 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-21T01:34:29.441+09:00  INFO 6043 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-21T01:34:29.448+09:00  INFO 6043 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-21T01:34:29.452+09:00  INFO 6043 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-21T01:34:29.454+09:00  INFO 6043 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

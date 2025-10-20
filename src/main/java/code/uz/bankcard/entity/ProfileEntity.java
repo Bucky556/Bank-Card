@@ -1,5 +1,6 @@
 package code.uz.bankcard.entity;
 
+import code.uz.bankcard.enums.GeneralStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +27,9 @@ public class ProfileEntity {
     private LocalDateTime createdDate;
     @Column(name = "visible")
     private Boolean visible = true;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private GeneralStatus status;
 
     @OneToMany(mappedBy = "profile", fetch = FetchType.LAZY)
     private List<RoleEntity> role;
