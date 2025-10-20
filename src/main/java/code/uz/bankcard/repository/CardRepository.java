@@ -1,6 +1,7 @@
 package code.uz.bankcard.repository;
 
 import code.uz.bankcard.entity.CardEntity;
+import code.uz.bankcard.enums.CardStatus;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -22,4 +23,8 @@ public interface CardRepository extends JpaRepository<CardEntity, UUID> {
     @Modifying
     @Query("update CardEntity set visible = false where id = :id")
     void changeVisibleById(UUID id);
+
+    @Query("update CardEntity c set c.status = :status where c.id = :id")
+    @Modifying
+    void updateStatusById(CardStatus status, UUID id);
 }

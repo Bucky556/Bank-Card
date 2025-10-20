@@ -5,6 +5,7 @@ import code.uz.bankcard.dto.card.CardAdminUpdateDTO;
 import code.uz.bankcard.dto.card.CardCreateDTO;
 import code.uz.bankcard.dto.card.CardResponseDTO;
 import code.uz.bankcard.dto.filter.CardFilterDTO;
+import code.uz.bankcard.enums.CardStatus;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -28,4 +29,7 @@ public interface CardService {
 
     PageImpl<CardResponseDTO> filter(@Valid CardFilterDTO dto, int page, int size);
 
+    AppResponse<String> changeStatus(UUID cardId, CardStatus status);
+
+    CardResponseDTO getBalance(UUID cardId);
 }

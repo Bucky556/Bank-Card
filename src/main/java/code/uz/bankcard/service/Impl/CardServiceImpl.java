@@ -171,6 +171,25 @@ public class CardServiceImpl implements CardService {
         return new PageImpl<>(responseList, PageRequest.of(page, size), filter.getTotalCount());
     }
 
+    @Override
+    public AppResponse<String> changeStatus(UUID cardId, CardStatus status) {
+        cardRepository.updateStatusById(status,cardId);
+        return new AppResponse<>("Status successfully changed");
+    }
+
+    @Override
+    public CardResponseDTO getBalance(UUID cardId) {
+        UUID profileId = SecurityUtil.getID();
+
+        CardEntity cardEntity = cardRepository.findByIdAndVisibleTrue(cardId).orElseThrow(() -> new NotFoundException("Card not found"));
+
+        if (!cardEntity.getProfile().getId().equals(profileId)) {
+            throw new BadException("This card does not belong to this profile");
+        }
+
+        return getCardResponseMasked(cardEntity);
+    }
+
     private CardResponseDTO getCardResponse(CardEntity cardEntity) {
         CardResponseDTO responseDTO = new CardResponseDTO();
         responseDTO.setId(cardEntity.getId());

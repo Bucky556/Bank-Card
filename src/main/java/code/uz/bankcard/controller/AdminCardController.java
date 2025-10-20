@@ -1,8 +1,10 @@
 package code.uz.bankcard.controller;
 
 
+import code.uz.bankcard.dto.AppResponse;
 import code.uz.bankcard.dto.card.CardAdminUpdateDTO;
 import code.uz.bankcard.dto.card.CardResponseDTO;
+import code.uz.bankcard.dto.card.CardStatusDTO;
 import code.uz.bankcard.service.Impl.CardServiceImpl;
 import code.uz.bankcard.util.PageUtil;
 import io.swagger.v3.oas.annotations.Operation;
@@ -58,5 +60,17 @@ public class AdminCardController {
     )
     public ResponseEntity<CardResponseDTO> getCardById(@PathVariable UUID cardID) {
         return ResponseEntity.ok(cardService.getCardByAdmin(cardID));
+    }
+
+    @PutMapping("/status/{cardId}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @Operation(
+            summary = "Change status of cards",
+            description = "This API allows admin to change status of cards"
+    )
+    public ResponseEntity<AppResponse<String>> changeStatus(@PathVariable("cardId") UUID cardId,
+                                                            @RequestBody CardStatusDTO dto) {
+        log.info("Card status changed with id: {}", cardId);
+        return ResponseEntity.ok(cardService.changeStatus(cardId, dto.getStatus()));
     }
 }

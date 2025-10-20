@@ -1,6 +1,7 @@
 package code.uz.bankcard.controller;
 
 import code.uz.bankcard.dto.AppResponse;
+import code.uz.bankcard.dto.CardBalanceDTO;
 import code.uz.bankcard.dto.filter.CardFilterDTO;
 import code.uz.bankcard.dto.card.CardResponseDTO;
 import code.uz.bankcard.dto.card.CardCreateDTO;
@@ -18,6 +19,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -64,5 +66,11 @@ public class CardController {
                                                             @RequestParam(value = "page", defaultValue = "1") int page,
                                                             @RequestParam(value = "size", defaultValue = "5") int size) {
         return ResponseEntity.ok(cardService.filter(dto, PageUtil.getCurrentPage(page), size));
+    }
+
+    @GetMapping("/balance/{cardId}")
+    @Operation(summary = "View Balance", description = "User can see balance of card")
+    public ResponseEntity<CardResponseDTO> getCardBalance(@PathVariable UUID cardId) {
+        return ResponseEntity.ok(cardService.getBalance(cardId));
     }
 }

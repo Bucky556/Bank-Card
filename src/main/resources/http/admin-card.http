@@ -14,3 +14,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2Rpcm9xaWxvdjg2QGdtYWlsL
 ### Get Card By ID
 GET localhost:8080/api/v1/admin/card/7ec07edc-4e21-42bd-b7b5-5d44feab4e4c
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJva2lsb3Zub2RpcjQ1NkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfQURNSU4iLCJpZCI6ImFkYTg2ZGYyLTBjNmEtNGU0YS1hZDk5LTk5ZDM2MWFmODA5MyIsImlhdCI6MTc2MDcyNzM1NSwiZXhwIjoxNzYwODEzNzU1fQ.lqscK46D1LXFo1i3FidNnV_jx1MdUG09UH2Vb5RXtys
+
+### Change Status of Card
+PUT localhost:8080/api/v1/admin/card/status/ec8a811c-c06b-4751-91f6-73528f380052
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbmpvbkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUixST0xFX0FETUlOIiwiaWQiOiJiM2UzN2Y2YS0xYTczLTRjNGQtYjNiMi1lYzYxYTdmMWUwZjIiLCJpYXQiOjE3NjA5Njk2NzYsImV4cCI6MTc2MTA1NjA3Nn0.-r33nVgNGToUf_U3md8L2ajCAekIhcNVG4elYXmpI6w
+
+{
+  "status": "BLOCKED"
+}
