@@ -78,6 +78,7 @@ public class CardController {
     @PreAuthorize("hasRole('ROLE_USER')")
     @Operation(summary = "Request card block", description = "User requests to block their card")
     public ResponseEntity<AppResponse<String>> requestBlock(@PathVariable UUID cardId) {
+        log.info("Request card block requested by ID: {}", cardId);
         return ResponseEntity.ok(cardService.requestCardBlock(cardId));
     }
 }
