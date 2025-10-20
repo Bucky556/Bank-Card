@@ -1,0 +1,29 @@
+### Transfer
+POST localhost:8080/api/v1/transaction/send
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2Rpcm9xaWxvdjg2QGdtYWlsLmNvbSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWQiOiJmZjVkN2UxOS0zYjI1LTRhZGQtYTU1ZC01M2I1MzYyYWMwMzgiLCJpYXQiOjE3NjA4NzQzMTMsImV4cCI6MTc2MDk2MDcxM30.7TUKGKJrPW0ia8o08-F5idWFmJRqcwZfV7UbQYU_Sh8
+
+{
+  "fromCardId": "7ec07edc-4e21-42bd-b7b5-5d44feab4e4c",
+  "toCardId": "8c448d61-65b2-4ce1-ad5a-f708fb5229a7",
+  "amount": 3500000.0
+}
+
+### Transfer by Admin
+POST localhost:8080/api/v1/transaction/admin/send
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJva2lsb3Zub2RpcjQ1NkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfQURNSU4iLCJpZCI6ImFkYTg2ZGYyLTBjNmEtNGU0YS1hZDk5LTk5ZDM2MWFmODA5MyIsImlhdCI6MTc2MDgwODg0NSwiZXhwIjoxNzYwODk1MjQ1fQ.OI4EANZ6FCxi8kErqkS-9T3eqsp2VlDib_6iF-aXY-M
+
+{
+  "fromCardId": "8591aec8-803a-40b1-b21b-19c4fba6dea1",
+  "toCardId": "8c448d61-65b2-4ce1-ad5a-f708fb5229a7",
+  "amount": 300000.0
+}
+
+### Get History
+GET localhost:8080/api/v1/transaction/history
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2Rpcm9xaWxvdjg2QGdtYWlsLmNvbSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWQiOiJmZjVkN2UxOS0zYjI1LTRhZGQtYTU1ZC01M2I1MzYyYWMwMzgiLCJpYXQiOjE3NjA4NzgxNTUsImV4cCI6MTc2MDk2NDU1NX0.KzTaPRStb8yUNi19_FTiRf_pzzDj_x-3GBrk90qM58I
+
+### Get All Transactions by Admin
+GET localhost:8080/api/v1/transaction/admin/transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJva2lsb3Zub2RpcjQ1NkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfQURNSU4iLCJpZCI6ImFkYTg2ZGYyLTBjNmEtNGU0YS1hZDk5LTk5ZDM2MWFmODA5MyIsImlhdCI6MTc2MDg3ODI2MSwiZXhwIjoxNzYwOTY0NjYxfQ.QBebvYeg5EnUJ0z-EKsvlCD3sdJWZlPJosf2GLsHcl4

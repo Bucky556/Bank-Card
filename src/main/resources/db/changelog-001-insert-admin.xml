@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Insert Admin Profile -->
+    <changeSet id="001-insert-admin-profile" author="nodirjon">
+        <insert tableName="profile">
+            <column name="id" value="b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2"/>
+            <column name="name" value="Adminjon"/>
+            <column name="username" value="adminjon@gmail.com"/>
+            <column name="password" value="$2a$10$BXgnKH4M3F13iHRn3pFlnu6VZSupNk8FJeljtEjS0UtV9LH4FhCZ6"/>
+            <column name="visible" valueBoolean="true"/>
+            <column name="created_date" valueDate="NOW()"/>
+        </insert>
+    </changeSet>
+
+    <!-- Insert Roles for Admin Profile -->
+    <changeSet id="002-insert-admin-roles" author="nodirjon">
+        <insert tableName="role">
+            <column name="profile_id" value="b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2"/>
+            <column name="role" value="ROLE_USER"/>
+            <column name="created_date" valueDate="NOW()"/>
+        </insert>
+
+        <insert tableName="role">
+            <column name="profile_id" value="b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2"/>
+            <column name="role" value="ROLE_ADMIN"/>
+            <column name="created_date" valueDate="NOW()"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

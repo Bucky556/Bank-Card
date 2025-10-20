@@ -1,0 +1,16 @@
+### Update Card by Admin
+PUT localhost:8080/api/v1/admin/card/7ec07edc-4e21-42bd-b7b5-5d44feab4e4c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJva2lsb3Zub2RpcjQ1NkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfQURNSU4iLCJpZCI6ImFkYTg2ZGYyLTBjNmEtNGU0YS1hZDk5LTk5ZDM2MWFmODA5MyIsImlhdCI6MTc2MDcyMzE5MywiZXhwIjoxNzYwODA5NTkzfQ.HpFMm4lLcR7m2baoRqZXuE7p97YVp0-I6s-Std8-BIM
+
+{
+  "status": "ACTIVE"
+}
+
+### Get All Cards
+GET localhost:8080/api/v1/admin/card/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2Rpcm9xaWxvdjg2QGdtYWlsLmNvbSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWQiOiJmZjVkN2UxOS0zYjI1LTRhZGQtYTU1ZC01M2I1MzYyYWMwMzgiLCJpYXQiOjE3NjA3MjcwMzEsImV4cCI6MTc2MDgxMzQzMX0.B3ugotA9dMA-BJWdmlNWH4xAwk6CKtMWVGseoGOSY7A
+
+### Get Card By ID
+GET localhost:8080/api/v1/admin/card/7ec07edc-4e21-42bd-b7b5-5d44feab4e4c
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJva2lsb3Zub2RpcjQ1NkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfQURNSU4iLCJpZCI6ImFkYTg2ZGYyLTBjNmEtNGU0YS1hZDk5LTk5ZDM2MWFmODA5MyIsImlhdCI6MTc2MDcyNzM1NSwiZXhwIjoxNzYwODEzNzU1fQ.lqscK46D1LXFo1i3FidNnV_jx1MdUG09UH2Vb5RXtys

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Bank-Card
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smartnotes?currentSchema=bank_card
+    username: postgres
+    password: Nodir556
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:/db/changelog-master.xml
+
+logging:
+  file:
+    name: logs/app.log

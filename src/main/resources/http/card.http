@@ -1,0 +1,22 @@
+### Create Card
+POST localhost:8080/api/v1/card/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZUBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfVVNFUiIsImlkIjoiOWRkOWY0MDMtZjNmNC00YmI2LTlmNjUtYjAyNTExMzU2MGEwIiwiaWF0IjoxNzYwODEwNDE4LCJleHAiOjE3NjA4OTY4MTh9.V8TVQQYglRhhduEvoaw4zRLRLptA8BDPH3ELI4TuGKM
+
+{
+  "profileId": "9dd9f403-f3f4-4bb6-9f65-b025113560a0",
+  "cardNumber": "9182777701928868",
+  "initialBalance": 20000.0
+}
+
+### Get Card List
+GET localhost:8080/api/v1/card/list?page=1&size=3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2Rpcm9xaWxvdjg2QGdtYWlsLmNvbSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWQiOiJmZjVkN2UxOS0zYjI1LTRhZGQtYTU1ZC01M2I1MzYyYWMwMzgiLCJpYXQiOjE3NjA3MjI5NzMsImV4cCI6MTc2MDgwOTM3M30.YWb3RmjPAgplelvRkSTCdk-yJxz5x2ow4SICBFGFI1I
+
+### Get Card by ID
+GET localhost:8080/api/v1/card/8591aec8-803a-40b1-b21b-19c4fba6dea1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub2Rpcm9xaWxvdjg2QGdtYWlsLmNvbSIsInJvbGVzIjoiUk9MRV9VU0VSIiwiaWQiOiJmZjVkN2UxOS0zYjI1LTRhZGQtYTU1ZC01M2I1MzYyYWMwMzgiLCJpYXQiOjE3NjA3MjI5NzMsImV4cCI6MTc2MDgwOTM3M30.YWb3RmjPAgplelvRkSTCdk-yJxz5x2ow4SICBFGFI1I
+
+### Delete Card
+DELETE localhost:8080/api/v1/card/8c448d61-65b2-4ce1-ad5a-f708fb5229a7
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJva2lsb3Zub2RpcjQ1NkBnbWFpbC5jb20iLCJyb2xlcyI6IlJPTEVfQURNSU4iLCJpZCI6ImFkYTg2ZGYyLTBjNmEtNGU0YS1hZDk5LTk5ZDM2MWFmODA5MyIsImlhdCI6MTc2MDcyNTg3NiwiZXhwIjoxNzYwODEyMjc2fQ._ww5uk4enYv1wAa_UVaTIXDeAt5NxsTUAF63edQa3ys
