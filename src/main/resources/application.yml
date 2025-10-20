@@ -4,8 +4,8 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/smartnotes?currentSchema=bank_card
-    username: postgres
-    password: Nodir556
+    username: your_username
+    password: your_pswd
     driver-class-name: org.postgresql.Driver
 
   jpa:
