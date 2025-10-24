@@ -1,6 +1,5 @@
 package code.uz.bankcard.controller;
 
-
 import code.uz.bankcard.dto.transaction.TransactionCreateDTO;
 import code.uz.bankcard.dto.transaction.TransactionResponseDTO;
 import code.uz.bankcard.service.Impl.TransactionServiceImpl;
@@ -14,7 +13,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.web.bind.annotation.*;
 
-
+/**
+ * Controller class for managing transactions and money transfers.
+ * <p>
+ * Provides endpoints for:
+ * <ul>
+ *     <li>Users to transfer money between their own cards</li>
+ *     <li>Admins to transfer money between any two cards</li>
+ *     <li>Users to view their transaction history</li>
+ *     <li>Admins to view all transactions</li>
+ * </ul>
+ */
 @RestController
 @RequestMapping("/api/v1/transaction")
 @RequiredArgsConstructor
@@ -22,8 +31,15 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Transactions", description = "APIs for managing transactions and transfers")
 @Slf4j
 public class TransactionController {
+
     private final TransactionServiceImpl transactionService;
 
+    /**
+     * Transfers money between user's own cards.
+     *
+     * @param dto TransactionCreateDTO containing source card, destination card, and amount
+     * @return ResponseEntity containing TransactionResponseDTO with transaction details
+     */
     @PostMapping("/send")
     @Operation(
             summary = "Transfer money between cards",
@@ -34,6 +50,12 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.transfer(dto));
     }
 
+    /**
+     * Admin transfers money between any two cards.
+     *
+     * @param dto TransactionCreateDTO containing source card, destination card, and amount
+     * @return ResponseEntity containing TransactionResponseDTO with transaction details
+     */
     @PostMapping("/admin/send")
     @Operation(
             summary = "Admin transfer between any cards",
@@ -44,6 +66,13 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.transferByAdmin(dto));
     }
 
+    /**
+     * Retrieves transaction history for the logged-in user.
+     *
+     * @param page Page number (default is 1)
+     * @param size Number of records per page (default is 10)
+     * @return ResponseEntity containing a paginated list of TransactionResponseDTO
+     */
     @GetMapping("/history")
     @Operation(
             summary = "View history",
@@ -56,6 +85,13 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.getAllHistory(page, size));
     }
 
+    /**
+     * Admins retrieve all transaction histories.
+     *
+     * @param page Page number (default is 1)
+     * @param size Number of records per page (default is 10)
+     * @return ResponseEntity containing a paginated list of TransactionResponseDTO
+     */
     @GetMapping("/admin/transactions")
     @Operation(
             summary = "View Transaction by admins",
