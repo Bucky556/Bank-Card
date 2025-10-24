@@ -20,6 +20,27 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
+/**
+ * Controller for administrative management of bank cards.
+ * <p>
+ * Provides endpoints that allow admins to perform CRUD operations
+ * and manage the status of cards. All APIs under this controller
+ * require the ROLE_ADMIN authority.
+ * </p>
+ *
+ * <p>Features:</p>
+ * <ul>
+ *     <li>View all cards with pagination</li>
+ *     <li>Retrieve card details by ID</li>
+ *     <li>Update card information</li>
+ *     <li>Change card status (ACTIVE/BLOCKED)</li>
+ * </ul>
+ *
+ * @author Nodir
+ * @version 1.0
+ * @since 2025-10-25
+ */
+
 @RestController
 @RequestMapping("/api/v1/admin/card")
 @RequiredArgsConstructor
