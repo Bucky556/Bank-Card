@@ -2,7 +2,6 @@ package code.uz.bankcard.util;
 
 import code.uz.bankcard.dto.JwtDTO;
 import code.uz.bankcard.enums.Role;
-import code.uz.bankcard.exception.BadException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -13,47 +12,46 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class JwtUtil {
-    private static final int liveTimeToken = 1000 * 3600 * 24;
-    private static final String secretKey = "aEo4QFpxOSQybkMjWGUhbUxyN3RWcDMqRGtZMSZiV3M=";
+    private static final long LIVE_TIME_TOKEN = 1000L * 3600 * 24; // 1 day
+    private static final String SECRET_KEY = "aEo4QFpxOSQybkMjWGUhbUxyN3RWcDMqRGtZMSZiV3M=";
 
-    public static String encode(String username, UUID id, List<Role> role) {
-        String strRoles = role.stream()
+    public static String encode(String username, UUID id, List<Role> roles) {
+        String strRoles = roles.stream()
                 .map(Role::name)
                 .collect(Collectors.joining(","));
 
-        Map<String, String> claims = new HashMap<>();
+        Map<String, Object> claims = new HashMap<>();
         claims.put("roles", strRoles);
         claims.put("id", id.toString());
 
         return Jwts.builder()
-                .subject(username)
-                .claims(claims)
-                .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + liveTimeToken))
+                .setSubject(username)
+                .setClaims(claims)
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + LIVE_TIME_TOKEN))
                 .signWith(getSignInKey())
                 .compact();
     }
 
     private static SecretKey getSignInKey() {
-        byte[] bytes = Decoders.BASE64.decode(secretKey);
-        return Keys.hmacShaKeyFor(bytes);
+        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+        return Keys.hmacShaKeyFor(keyBytes);
     }
 
     public static JwtDTO decode(String token) {
-        Claims claims = Jwts
-                .parser()
-                .verifyWith(getSignInKey())
+        Claims claims = Jwts.parserBuilder()
+                .setSigningKey(getSignInKey())
                 .build()
-                .parseSignedClaims(token)
-                .getPayload();
+                .parseClaimsJws(token)
+                .getBody();
 
         String username = claims.getSubject();
-        UUID id = UUID.fromString(claims.get("id", String.class));
-        String roles = (String) claims.get("roles");
-        List<Role> roleList = Arrays.stream(roles.split(","))
+        UUID id = UUID.fromString((String) claims.get("id"));
+        String rolesStr = (String) claims.get("roles");
+        List<Role> roles = Arrays.stream(rolesStr.split(","))
                 .map(Role::valueOf)
                 .toList();
 
-        return new JwtDTO(username, id, roleList);
+        return new JwtDTO(username, id, roles);
     }
 }

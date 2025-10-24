@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -34,25 +35,29 @@ public class SpringConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(authorizeRequests -> {
-            authorizeRequests
-                    .requestMatchers(WHITE_LIST).permitAll()
-                    .anyRequest()
-                    .authenticated();
-        }).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-        http.userDetailsService(userDetailsService);
 
-        http.csrf(AbstractHttpConfigurer::disable);
-        http.cors(httpSecurityCorsConfigurer -> {
+        http.cors(cors -> {
             CorsConfiguration configuration = new CorsConfiguration();
-            configuration.setAllowedOriginPatterns(List.of("*"));
+            configuration.setAllowedOriginPatterns(List.of("*")); // Production uchun whitelist bilan almashtiring
             configuration.setAllowedMethods(List.of("*"));
             configuration.setAllowedHeaders(List.of("*"));
+            configuration.setAllowCredentials(true);
 
             UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
             source.registerCorsConfiguration("/**", configuration);
-            httpSecurityCorsConfigurer.configurationSource(source);
-        });
+            cors.configurationSource(source);
+        }).csrf(AbstractHttpConfigurer::disable);
+
+        http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
+        http.authorizeHttpRequests(auth -> auth
+                .requestMatchers(WHITE_LIST).permitAll()
+                .anyRequest().authenticated()
+        );
+
+        http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+
+        http.userDetailsService(userDetailsService);
 
         return http.build();
     }

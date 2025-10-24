@@ -22,11 +22,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<ProfileEntity> profile = profileRepository.findByUsernameAndVisibleTrue(username);
-        if (profile.isEmpty()) {
-            throw new UsernameNotFoundException("Username not found");
-        }
-        ProfileEntity profileEntity = profile.get();
+        ProfileEntity profileEntity = profileRepository.findByUsernameAndVisibleTrue(username)
+                .orElseThrow(() -> new UsernameNotFoundException("Username not found"));
         List<RoleEntity> roleList = roleRepository.findAllByProfileId(profileEntity.getId());
 
         return new CustomUserDetails(profileEntity, roleList);

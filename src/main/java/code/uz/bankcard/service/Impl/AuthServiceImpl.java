@@ -84,14 +84,11 @@ public class AuthServiceImpl implements AuthService {
                     new UsernamePasswordAuthenticationToken(dto.getUsername(), dto.getPassword())
             );
 
-            if (authenticate.isAuthenticated()) {
                 CustomUserDetails principal = (CustomUserDetails) authenticate.getPrincipal();
                 return getLoginResponse(principal.getId(), principal.getUsername(), principal.getName());
-            }
         } catch (Exception e) {
             throw new BadException("Invalid username or password");
         }
-        throw new BadException("Invalid username or password");
     }
 
     /**

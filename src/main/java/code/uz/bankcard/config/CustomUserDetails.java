@@ -18,13 +18,19 @@ public class CustomUserDetails implements UserDetails {
     private final String username;
     private final String password;
     private final Collection<? extends GrantedAuthority> roles;
+    private final boolean visible;
+    private final String status;
 
     public CustomUserDetails(ProfileEntity profileEntity, List<RoleEntity> roles) {
         this.id = profileEntity.getId();
         this.name = profileEntity.getName();
         this.username = profileEntity.getUsername();
         this.password = profileEntity.getPassword();
-        this.roles = roles.stream().map(role -> new SimpleGrantedAuthority(role.getRole().name())).toList();
+        this.roles = roles.stream()
+                .map(role -> new SimpleGrantedAuthority(role.getRole().name()))
+                .toList();
+        this.visible = profileEntity.getVisible();
+        this.status = String.valueOf(profileEntity.getStatus());
     }
 
     @Override
@@ -44,12 +50,12 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return !status.equals("BLOCKED");
     }
 
     @Override
@@ -59,6 +65,6 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return visible && status.equals("ACTIVE");
     }
 }

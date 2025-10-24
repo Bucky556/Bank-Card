@@ -1,0 +1,435 @@
+2025-10-25T02:19:41.360+09:00  INFO 16130 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 16130 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-25T02:19:41.361+09:00  INFO 16130 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T02:19:41.689+09:00  INFO 16130 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T02:19:41.711+09:00  INFO 16130 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+2025-10-25T02:19:41.910+09:00  INFO 16130 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-25T02:19:41.916+09:00  INFO 16130 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T02:19:41.916+09:00  INFO 16130 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-25T02:19:41.933+09:00  INFO 16130 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T02:19:41.934+09:00  INFO 16130 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 553 ms
+2025-10-25T02:19:41.990+09:00  INFO 16130 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T02:19:42.038+09:00  INFO 16130 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@166b11e
+2025-10-25T02:19:42.038+09:00  INFO 16130 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T02:19:42.107+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-25T02:19:42.309+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:19:42.327+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-25T02:19:42.327+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-25T02:19:42.330+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-25T02:19:42.331+09:00  INFO 16130 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-25T02:19:42.360+09:00  INFO 16130 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T02:19:42.389+09:00  INFO 16130 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-25T02:19:42.402+09:00  INFO 16130 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T02:19:42.508+09:00  INFO 16130 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T02:19:42.544+09:00  INFO 16130 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-25T02:19:42.896+09:00  INFO 16130 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T02:19:43.034+09:00  INFO 16130 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:19:43.145+09:00  INFO 16130 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-25T02:19:43.421+09:00  INFO 16130 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-25T02:19:43.485+09:00  WARN 16130 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T02:19:43.777+09:00  INFO 16130 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-25T02:19:43.781+09:00  INFO 16130 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.6 seconds (process running for 2.904)
+2025-10-25T02:22:41.430+09:00  INFO 16130 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-25T02:22:41.434+09:00  INFO 16130 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-25T02:22:41.439+09:00  INFO 16130 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:22:41.442+09:00  INFO 16130 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T02:22:41.443+09:00  INFO 16130 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T02:22:42.829+09:00  INFO 16221 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 16221 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-25T02:22:42.830+09:00  INFO 16221 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T02:22:43.167+09:00  INFO 16221 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T02:22:43.188+09:00  INFO 16221 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-10-25T02:22:43.377+09:00  INFO 16221 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-25T02:22:43.386+09:00  INFO 16221 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T02:22:43.386+09:00  INFO 16221 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-25T02:22:43.402+09:00  INFO 16221 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T02:22:43.402+09:00  INFO 16221 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
+2025-10-25T02:22:43.454+09:00  INFO 16221 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T02:22:43.488+09:00  INFO 16221 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69a373fd
+2025-10-25T02:22:43.488+09:00  INFO 16221 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T02:22:43.543+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-25T02:22:43.696+09:00 ERROR 16221 --- [Bank-Card] [main] liquibase.parser                         : cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+2025-10-25T02:22:43.697+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.command                        : Logging exception.
+2025-10-25T02:22:43.697+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.ui                             : ERROR: Exception Details
+2025-10-25T02:22:43.697+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.ui                             : ERROR: Exception Primary Class:  SAXParseException
+2025-10-25T02:22:43.697+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+2025-10-25T02:22:43.697+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.ui                             : ERROR: Exception Primary Source:  PostgreSQL 17.4
+2025-10-25T02:22:43.698+09:00  INFO 16221 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-25T02:22:43.698+09:00 ERROR 16221 --- [Bank-Card] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/Users/nodirjonokilov/Desktop/Bank-Card/target/classes/code/uz/bankcard/config/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customUserDetailsService' defined in file [/Users/nodirjonokilov/Desktop/Bank-Card/target/classes/code/uz/bankcard/config/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'profileRepository' defined in code.uz.bankcard.repository.ProfileRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-10-25T02:22:43.707+09:00  INFO 16221 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-25T02:22:43.707+09:00  WARN 16221 --- [Bank-Card] [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1:housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+2025-10-25T02:22:43.707+09:00  WARN 16221 --- [Bank-Card] [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1:connection-adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Thread.sleepNanos0(Native Method)
+ java.base/java.lang.Thread.sleepNanos(Thread.java:496)
+ java.base/java.lang.Thread.sleep(Thread.java:527)
+ com.zaxxer.hikari.util.UtilityElf.quietlySleep(UtilityElf.java:71)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:757)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+ java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+2025-10-25T02:22:43.708+09:00  WARN 16221 --- [Bank-Card] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-10-25T02:22:43.708+09:00  INFO 16221 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T02:22:43.716+09:00  INFO 16221 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T02:22:43.720+09:00  INFO 16221 --- [Bank-Card] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-25T02:22:43.725+09:00 ERROR 16221 --- [Bank-Card] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at code.uz.bankcard.BankCardApplication.main(BankCardApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.6.jar:3.5.6]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/Users/nodirjonokilov/Desktop/Bank-Card/target/classes/code/uz/bankcard/config/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customUserDetailsService' defined in file [/Users/nodirjonokilov/Desktop/Bank-Card/target/classes/code/uz/bankcard/config/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'profileRepository' defined in code.uz.bankcard.repository.ProfileRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:773) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.6.jar:3.5.6]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [/Users/nodirjonokilov/Desktop/Bank-Card/target/classes/code/uz/bankcard/config/CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'profileRepository' defined in code.uz.bankcard.repository.ProfileRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'profileRepository' defined in code.uz.bankcard.repository.ProfileRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1725) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1474) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 80 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 92 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267) ~[liquibase-core-4.29.2.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 101 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at liquibase.command.CommandScope.execute(CommandScope.java:258) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:191) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:190) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:169) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1329) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:205) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:188) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:305) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:257) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:191) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:190) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:169) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:257) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250) ~[liquibase-core-4.29.2.jar:na]
+	... 103 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:129) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:200) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.Scope.child(Scope.java:176) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:128) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:87) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:220) ~[liquibase-core-4.29.2.jar:na]
+	... 119 common frames omitted
+Caused by: liquibase.exception.SetupException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:514) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:466) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:433) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23) ~[liquibase-core-4.29.2.jar:na]
+	... 125 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1043) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:504) ~[liquibase-core-4.29.2.jar:na]
+	... 128 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 1 column 55 of classpath:db/changelog-002-add-status.xml: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:130) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15) ~[liquibase-core-4.29.2.jar:na]
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1015) ~[liquibase-core-4.29.2.jar:na]
+	... 129 common frames omitted
+Caused by: org.xml.sax.SAXParseException: cvc-elt.1.a: Cannot find the declaration of element 'changeSet'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2133) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:375) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:614) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3088) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:866) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643) ~[na:na]
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:121) ~[liquibase-core-4.29.2.jar:na]
+	... 131 common frames omitted
+
+2025-10-25T02:23:41.363+09:00  INFO 16251 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 16251 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-25T02:23:41.364+09:00  INFO 16251 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T02:23:41.682+09:00  INFO 16251 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T02:23:41.705+09:00  INFO 16251 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2025-10-25T02:23:41.885+09:00  INFO 16251 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-25T02:23:41.890+09:00  INFO 16251 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T02:23:41.890+09:00  INFO 16251 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-25T02:23:41.913+09:00  INFO 16251 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T02:23:41.913+09:00  INFO 16251 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
+2025-10-25T02:23:41.964+09:00  INFO 16251 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T02:23:41.995+09:00  INFO 16251 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@372954e1
+2025-10-25T02:23:41.996+09:00  INFO 16251 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T02:23:42.048+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-25T02:23:42.242+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:23:42.259+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-25T02:23:42.260+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:23:42.262+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-25T02:23:42.262+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-25T02:23:42.262+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-25T02:23:42.262+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-25T02:23:42.262+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-25T02:23:42.262+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-25T02:23:42.263+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-25T02:23:42.263+09:00  INFO 16251 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-25T02:23:42.294+09:00  INFO 16251 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T02:23:42.320+09:00  INFO 16251 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-25T02:23:42.333+09:00  INFO 16251 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T02:23:42.441+09:00  INFO 16251 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T02:23:42.477+09:00  INFO 16251 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-25T02:23:42.827+09:00  INFO 16251 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T02:23:42.975+09:00  INFO 16251 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:23:43.088+09:00  INFO 16251 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-25T02:23:43.358+09:00  INFO 16251 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-25T02:23:43.414+09:00  WARN 16251 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T02:23:43.706+09:00  INFO 16251 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-25T02:23:43.710+09:00  INFO 16251 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.511 seconds (process running for 2.818)
+2025-10-25T02:23:45.711+09:00  INFO 16251 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-25T02:23:45.713+09:00  INFO 16251 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-25T02:23:45.717+09:00  INFO 16251 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:23:45.717+09:00  INFO 16251 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T02:23:45.719+09:00  INFO 16251 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T02:24:37.221+09:00  INFO 16288 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 16288 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-25T02:24:37.222+09:00  INFO 16288 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T02:24:37.551+09:00  INFO 16288 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T02:24:37.574+09:00  INFO 16288 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2025-10-25T02:24:37.761+09:00  INFO 16288 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-25T02:24:37.767+09:00  INFO 16288 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T02:24:37.767+09:00  INFO 16288 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-25T02:24:37.783+09:00  INFO 16288 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T02:24:37.783+09:00  INFO 16288 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2025-10-25T02:24:37.835+09:00  INFO 16288 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T02:24:37.866+09:00  INFO 16288 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69a373fd
+2025-10-25T02:24:37.866+09:00  INFO 16288 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T02:24:37.924+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-25T02:24:38.107+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:24:38.127+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-25T02:24:38.128+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:24:38.130+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-25T02:24:38.130+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-25T02:24:38.130+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-25T02:24:38.130+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-25T02:24:38.130+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-25T02:24:38.130+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-25T02:24:38.131+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-25T02:24:38.131+09:00  INFO 16288 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-25T02:24:38.160+09:00  INFO 16288 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T02:24:38.183+09:00  INFO 16288 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-25T02:24:38.195+09:00  INFO 16288 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T02:24:38.299+09:00  INFO 16288 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T02:24:38.331+09:00  INFO 16288 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-25T02:24:38.683+09:00  INFO 16288 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T02:24:38.827+09:00  INFO 16288 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:24:38.950+09:00  INFO 16288 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-25T02:24:39.215+09:00  INFO 16288 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-25T02:24:39.273+09:00  WARN 16288 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T02:24:39.562+09:00  INFO 16288 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-25T02:24:39.566+09:00  INFO 16288 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.514 seconds (process running for 2.833)
+2025-10-25T02:24:57.659+09:00  INFO 16288 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-25T02:24:57.665+09:00  INFO 16288 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-25T02:24:57.671+09:00  INFO 16288 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:24:57.674+09:00  INFO 16288 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T02:24:57.677+09:00  INFO 16288 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-25T02:52:20.815+09:00  INFO 17034 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Starting BankCardApplication using Java 23.0.2 with PID 17034 (/Users/nodirjonokilov/Desktop/Bank-Card/target/classes started by nodirjonokilov in /Users/nodirjonokilov/Desktop/Bank-Card)
+2025-10-25T02:52:20.816+09:00  INFO 17034 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-10-25T02:52:21.161+09:00  INFO 17034 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-25T02:52:21.184+09:00  INFO 17034 --- [Bank-Card] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+2025-10-25T02:52:21.386+09:00  INFO 17034 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-25T02:52:21.392+09:00  INFO 17034 --- [Bank-Card] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-25T02:52:21.392+09:00  INFO 17034 --- [Bank-Card] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-25T02:52:21.410+09:00  INFO 17034 --- [Bank-Card] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-25T02:52:21.410+09:00  INFO 17034 --- [Bank-Card] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 577 ms
+2025-10-25T02:52:21.472+09:00  INFO 17034 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-25T02:52:21.515+09:00  INFO 17034 --- [Bank-Card] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4567fb2b
+2025-10-25T02:52:21.516+09:00  INFO 17034 --- [Bank-Card] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-25T02:52:21.584+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.database                       : Set default schema name to bank_card
+2025-10-25T02:52:21.793+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:52:21.811+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-10-25T02:52:21.811+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.changelog                      : Reading from bank_card.databasechangelog
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : UPDATE SUMMARY
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : Run:                          0
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : Previously run:               4
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : Filtered out:                 0
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : -------------------------------
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : Total change sets:            4
+2025-10-25T02:52:21.814+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.util                           : Update summary generated
+2025-10-25T02:52:21.815+09:00  INFO 17034 --- [Bank-Card] [main] liquibase.command                        : Command execution complete
+2025-10-25T02:52:21.849+09:00  INFO 17034 --- [Bank-Card] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-25T02:52:21.875+09:00  INFO 17034 --- [Bank-Card] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-25T02:52:21.888+09:00  INFO 17034 --- [Bank-Card] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-25T02:52:22.001+09:00  INFO 17034 --- [Bank-Card] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-25T02:52:22.037+09:00  INFO 17034 --- [Bank-Card] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-25T02:52:22.422+09:00  INFO 17034 --- [Bank-Card] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-25T02:52:22.545+09:00  INFO 17034 --- [Bank-Card] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:52:22.652+09:00  INFO 17034 --- [Bank-Card] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-25T02:52:22.938+09:00  INFO 17034 --- [Bank-Card] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-25T02:52:23.002+09:00  WARN 17034 --- [Bank-Card] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-25T02:52:23.352+09:00  INFO 17034 --- [Bank-Card] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-25T02:52:23.357+09:00  INFO 17034 --- [Bank-Card] [main] code.uz.bankcard.BankCardApplication     : Started BankCardApplication in 2.729 seconds (process running for 3.044)
+2025-10-25T02:52:25.675+09:00  INFO 17034 --- [Bank-Card] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-25T02:52:25.678+09:00  INFO 17034 --- [Bank-Card] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-25T02:52:25.684+09:00  INFO 17034 --- [Bank-Card] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-25T02:52:25.686+09:00  INFO 17034 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-25T02:52:25.689+09:00  INFO 17034 --- [Bank-Card] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
