@@ -3,10 +3,16 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <!-- Insert Admin Profile -->
     <changeSet id="001-insert-admin-profile" author="nodirjon">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <sqlCheck expectedResult="0">
+                    SELECT COUNT(*) FROM profile WHERE id='b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2';
+                </sqlCheck>
+            </not>
+        </preConditions>
         <insert tableName="profile">
             <column name="id" value="b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2"/>
             <column name="name" value="Adminjon"/>
@@ -17,8 +23,15 @@
         </insert>
     </changeSet>
 
-    <!-- Insert Roles for Admin Profile -->
     <changeSet id="002-insert-admin-roles" author="nodirjon">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <sqlCheck expectedResult="0">
+                    SELECT COUNT(*) FROM role WHERE profile_id='b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2' AND role='ROLE_ADMIN';
+                </sqlCheck>
+            </not>
+        </preConditions>
+
         <insert tableName="role">
             <column name="profile_id" value="b3e37f6a-1a73-4c4d-b3b2-ec61a7f1e0f2"/>
             <column name="role" value="ROLE_USER"/>

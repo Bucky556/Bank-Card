@@ -6,6 +6,17 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="003-add-card-status" author="nodirjon">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <sqlCheck expectedResult="0">
+                    SELECT COUNT(*)
+                    FROM information_schema.table_constraints
+                    WHERE table_name='card'
+                    AND constraint_name='card_status_check';
+                </sqlCheck>
+            </not>
+        </preConditions>
+
         <sql>
             ALTER TABLE card
             DROP CONSTRAINT IF EXISTS card_status_check;
@@ -15,6 +26,5 @@
                     CHECK (status IN ('ACTIVE', 'BLOCKED', 'EXPIRED', 'REQUEST_BLOCK'));
         </sql>
     </changeSet>
-
 
 </databaseChangeLog>

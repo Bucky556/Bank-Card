@@ -6,6 +6,17 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="004-add-status-column-to-profile" author="nodirjonokilov">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <sqlCheck expectedResult="0">
+                    SELECT COUNT(*)
+                    FROM information_schema.columns
+                    WHERE table_name='profile'
+                    AND column_name='status';
+                </sqlCheck>
+            </not>
+        </preConditions>
+
         <sql>
             ALTER TABLE profile
                 ADD COLUMN status VARCHAR(20) DEFAULT 'ACTIVE';
@@ -17,4 +28,3 @@
     </changeSet>
 
 </databaseChangeLog>
-

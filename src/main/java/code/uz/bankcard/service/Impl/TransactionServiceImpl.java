@@ -34,6 +34,16 @@ public class TransactionServiceImpl implements TransactionService {
     private final CardRepository cardRepository;
     private final TransactionSaveService transactionSaveService;
 
+    /**
+     * Transfer money from one card to another by the current user.
+     * Only allowed if the user owns the source card and both cards are active.
+     *
+     * @param dto Transaction data transfer object containing fromCardId, toCardId, and amount
+     * @return TransactionResponseDTO containing transaction details
+     * @throws NotFoundException if either card is not found
+     * @throws BadException if user tries to transfer from a card they do not own
+     *                      or if the sender/recipient card is not active
+     */
     @Transactional
     public TransactionResponseDTO transfer(@Valid TransactionCreateDTO dto) {
         UUID profileId = SecurityUtil.getID();
@@ -58,6 +68,15 @@ public class TransactionServiceImpl implements TransactionService {
         return executeTransfer(dto, fromCard, toCard);
     }
 
+    /**
+     * Transfer money from one card to another by an admin.
+     * Admin can transfer from/to any cards regardless of ownership.
+     *
+     * @param dto Transaction data transfer object containing fromCardId, toCardId, and amount
+     * @return TransactionResponseDTO containing transaction details
+     * @throws NotFoundException if either card is not found
+     * @throws BadException if the user is not an admin
+     */
     @Transactional
     public TransactionResponseDTO transferByAdmin(@Valid TransactionCreateDTO dto) {
         boolean isAdmin = SecurityUtil.hasRole(Role.ROLE_ADMIN);
@@ -73,6 +92,13 @@ public class TransactionServiceImpl implements TransactionService {
         return executeTransfer(dto, fromCard, toCard);
     }
 
+    /**
+     * Get transaction history for the current user.
+     *
+     * @param page page number
+     * @param size page size
+     * @return Page of TransactionResponseDTO containing transactions for the user's cards
+     */
     public Page<TransactionResponseDTO> getAllHistory(int page, int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         UUID profileId = SecurityUtil.getID();
@@ -95,6 +121,14 @@ public class TransactionServiceImpl implements TransactionService {
         return new PageImpl<>(responseDTOList, pageRequest, responseDTOList.size());
     }
 
+    /**
+     * Get all transactions in the system (admin only).
+     *
+     * @param page page number
+     * @param size page size
+     * @return Page of TransactionResponseDTO containing all transactions
+     * @throws BadException if the current user is not an admin
+     */
     public Page<TransactionResponseDTO> getAllTransactionsByAdmin(int page, int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         boolean isAdmin = SecurityUtil.hasRole(Role.ROLE_ADMIN);
@@ -120,6 +154,16 @@ public class TransactionServiceImpl implements TransactionService {
         return new PageImpl<>(responseDTOList, pageRequest, responseDTOList.size());
     }
 
+    /**
+     * Execute the transfer between two cards and save the transaction.
+     * If the balance is insufficient, save as failed transaction.
+     *
+     * @param dto      TransactionCreateDTO containing fromCardId, toCardId, and amount
+     * @param fromCard source card
+     * @param toCard   destination card
+     * @return TransactionResponseDTO containing transaction details
+     * @throws BadException if the source card balance is insufficient
+     */
     @Transactional
     protected TransactionResponseDTO executeTransfer(TransactionCreateDTO dto, CardEntity fromCard, CardEntity toCard) {
         BigDecimal amount = dto.getAmount();
@@ -151,6 +195,14 @@ public class TransactionServiceImpl implements TransactionService {
         return toDTO(entity, fromCard, toCard);
     }
 
+    /**
+     * Convert TransactionEntity to TransactionResponseDTO.
+     *
+     * @param entity   transaction entity
+     * @param fromCard source card
+     * @param toCard   destination card
+     * @return TransactionResponseDTO
+     */
     private TransactionResponseDTO toDTO(TransactionEntity entity, CardEntity fromCard, CardEntity toCard) {
         TransactionResponseDTO dto = new TransactionResponseDTO();
         dto.setId(entity.getId());

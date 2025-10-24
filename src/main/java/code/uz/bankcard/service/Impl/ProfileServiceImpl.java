@@ -15,67 +15,93 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * Implementation of ProfileService for managing user profiles.
+ * Handles retrieval, status changes, and logical deletion.
+ */
 @Service
 @RequiredArgsConstructor
 public class ProfileServiceImpl implements ProfileService {
+
     private final ProfileRepository profileRepository;
 
-
+    /**
+     * Get all profiles.
+     *
+     * @return list of ProfileResponseDTO
+     */
     public List<ProfileResponseDTO> getProfiles() {
-        List<ProfileEntity> all = profileRepository.findAll();
-        if (all.isEmpty()) {
+        List<ProfileEntity> allProfiles = profileRepository.findAll();
+        if (allProfiles.isEmpty()) {
             return Collections.emptyList();
         }
-
-        return all.stream()
-                .map(this::toDTO)
-                .toList();
+        return allProfiles.stream().map(this::toDTO).toList();
     }
 
-    @Override
-    public AppResponse<String> changeStatus(UUID profileId, GeneralStatus status) {
-        profileRepository.updateStatusById(status, profileId);
-
-        Optional<ProfileEntity> byId = profileRepository.findById(profileId);
-        if (byId.isEmpty()){
-            throw new NotFoundException("profile not found");
-        }
-        ProfileEntity profileEntity = byId.get();
-        if (profileEntity.getStatus() == GeneralStatus.BLOCKED){
-            throw new BadException("Profile is already blocked");
-        }
-
-        return new AppResponse<>("Status changed");
-    }
-
+    /**
+     * Get profile by ID.
+     *
+     * @param profileId UUID of profile
+     * @return ProfileResponseDTO
+     * @throws NotFoundException if profile does not exist
+     */
     public ProfileResponseDTO getProfileById(UUID profileId) {
         ProfileEntity profile = profileRepository.findById(profileId)
                 .orElseThrow(() -> new NotFoundException("Profile not found"));
-
         return toDTO(profile);
     }
 
-    @Override
+    /**
+     * Change the status of a profile (e.g., ACTIVE, BLOCKED).
+     * Throws exception if trying to block an already blocked profile.
+     *
+     * @param profileId UUID of profile
+     * @param status new status
+     * @return AppResponse confirmation
+     */
+    public AppResponse<String> changeStatus(UUID profileId, GeneralStatus status) {
+        ProfileEntity profile = profileRepository.findById(profileId)
+                .orElseThrow(() -> new NotFoundException("Profile not found"));
+
+        if (profile.getStatus() == status && status == GeneralStatus.BLOCKED) {
+            throw new BadException("Profile is already blocked");
+        }
+
+        profileRepository.updateStatusById(status, profileId);
+        return new AppResponse<>("Status changed");
+    }
+
+    /**
+     * Logical delete a profile (set visible=false).
+     *
+     * @param profileId UUID of profile
+     * @return AppResponse confirmation
+     */
     public AppResponse<String> delete(UUID profileId) {
         profileRepository.changeVisibleById(profileId);
         return new AppResponse<>("Profile deleted");
     }
 
-    private ProfileResponseDTO toDTO(ProfileEntity profileEntity) {
-        ProfileResponseDTO profileResponseDTO = new ProfileResponseDTO();
-        profileResponseDTO.setId(profileEntity.getId());
-        profileResponseDTO.setName(profileEntity.getName());
-        profileResponseDTO.setUsername(profileEntity.getUsername());
-        if (profileEntity.getRole() != null) {
-            List<Role> roleList = profileEntity.getRole()
-                    .stream()
+    /**
+     * Convert ProfileEntity to ProfileResponseDTO.
+     */
+    private ProfileResponseDTO toDTO(ProfileEntity profile) {
+        ProfileResponseDTO dto = new ProfileResponseDTO();
+        dto.setId(profile.getId());
+        dto.setName(profile.getName());
+        dto.setUsername(profile.getUsername());
+
+        if (profile.getRole() != null && !profile.getRole().isEmpty()) {
+            List<Role> roleList = profile.getRole().stream()
                     .map(RoleEntity::getRole)
                     .toList();
-            profileResponseDTO.setRoles(roleList);
+            dto.setRoles(roleList);
+        } else {
+            dto.setRoles(Collections.emptyList());
         }
-        return profileResponseDTO;
+
+        return dto;
     }
 }
